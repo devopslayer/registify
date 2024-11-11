@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registify - Manage and Register Users with Ease</title>
+
+    <base href="/frontend/" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap Stylings and Icons -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Registify</a>
+    </nav>
+
+    <div class="container mt-5">
+      <h3 class="text-center mb-4">User Registration App</h3>
+
+      <!-- User Form Card -->
+      <div class="card">
+        <div class="card-body">
+          <form
+            id="userForm"
+            class="d-flex justify-content-center align-items-center"
+          >
+            <div class="form-row">
+              <div class="col">
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="col">
+                <input type="date" id="dob" class="form-control" required />
+              </div>
+              <div class="col">
+                <button type="submit" id="addUserBtn" class="btn btn-primary">
+                  Add User
+                </button>
+                <button
+                  type="button"
+                  id="updateUserBtn"
+                  class="btn btn-success"
+                  style="display: none"
+                >
+                  Update User
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- User List Table -->
+      <div id="userListContainer">
+        <p id="noDataMessage" class="text-center">
+          No data available right now.
+        </p>
+        <div class="table-responsive">
+          <table
+            id="userTable"
+            class="table table-bordered table-striped mt-4"
+            style="display: none"
+          >
+            <thead class="thead-dark">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Date of Birth</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+          </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="btn-page d-flex justify-content-between mt-3">
+          <button class="btn btn-secondary" id="prevBtn">Previous</button>
+          <button class="btn btn-secondary" id="nextBtn">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h3 {
+  color: #333;
+}
+
+#noDataMessage {
+  color: #888;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.table {
+  margin-top: 10px;
+}
+
+.user-card {
+  margin-top: 5px;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-row .col {
+    margin-bottom: 10px;
+  }
+
+  .form-row .col:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+
+  .table-responsive {
+    padding: none;
+    overflow-x: auto;
+    text-wrap: nowrap;
+  }
+
+  .table {
+    font-size: 0.9em;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-page .btn {
+    margin-right: 10px;
+  }
+
+  .action-btn {
+    width: fit-content;
+  }
+
+  .action-btn i {
+    margin: 0 auto;
+  }
+}
